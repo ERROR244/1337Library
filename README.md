@@ -1,7 +1,7 @@
 # 42 Project Repository
 # 1337Library
 
-Welcome to my 42 Project Repository! This repository showcases projects completed in one library as part of the 42 curriculum, including the following:
+Welcome to my 42 Project Repository! This repository showcases 3 projects completed in one library:
 
 1. **Libft**
    - **Description:** A personal C library containing various standard functions and additional utility functions.
@@ -22,15 +22,15 @@ Welcome to my 42 Project Repository! This repository showcases projects complete
 
 - [Libft](#libft)
   - [Usage](#usage)
-  - [License](#en.subject)
+  - [en.subject](#en.subject)
 
 - [ft_printf](#ft_printf)
   - [Usage](#usage)
-  - [License](#en.subject)
+  - [en.subject](#en.subject)
 
 - [get_next_line](#get_next_line)
   - [Usage](#usage)
-  - [License](#en.subject)
+  - [en.subject](#en.subject)
 
 ### Cloning the Repository
 

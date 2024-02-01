@@ -1,5 +1,4 @@
 # 42 Project Repository
-# 1337Library
 
 ## Table of Contents
 
@@ -15,10 +14,19 @@
   - [Usage](#usage)
   - [en.subject](#en.subject)
 
-### Cloning the Repository
 
-https://github.com/ERROR244/1337Library.git
+#### How does it work?
+The goal is to create a library called libft.a from the source files so I can later use that library from other projects at 42.
 
+To create that library, after downloading/cloning this project, cd into the project, , call make:
+
+```
+gcl https://github.com/ERROR244/1337Library.git && cd 1337Library
+make && make clean
+```
+You should see a Libft.A.
+
+# 1337Library
 
 Welcome to my 42 Project Repository! This repository showcases the 3 projects `Libft` `ft_printf` `get_next_line` completed and merged in one library:
 
@@ -36,5 +44,6 @@ Welcome to my 42 Project Repository! This repository showcases the 3 projects `L
    - **Description:** A function that reads a line from a file descriptor, handling multiple file descriptors.
    - **Usage:** Guidelines on implementing `get_next_line` in your project.
    - **en.subject:** `subjects/subGetNextLine.pdf`.
+
 
 

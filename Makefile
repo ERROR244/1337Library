@@ -6,7 +6,7 @@
 #    By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 14:29:42 by ksohail-          #+#    #+#              #
-#    Updated: 2024/02/01 00:20:34 by ksohail-         ###   ########.fr        #
+#    Updated: 2024/02/01 01:24:45 by ksohail-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,13 +67,14 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-NAME = MyLib
+NAME = Libft.A
 OBJ = $(SRC:.c=.o)
 
 
 all: $(NAME)
 
 $(NAME): run_script $(OBJ)
+	@printf "\033[0;32m\nCompilation completed :-)\033[0m\n"
 	@printf "\033[0;32mBuilding MyLib"
 	@for i in 1 2 3; do \
         sleep 0.5; \

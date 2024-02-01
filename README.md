@@ -16,14 +16,16 @@
 
 
 #### How does it work?
-The goal is to create a library called libft.a from the source files so I can later use that library from other projects at 42.
+The goal is to create a library called Libft.A from the source files so I can later use that library from other projects at 42.
 
 To create that library, after downloading/cloning this project, cd into the project, , call make:
 
 ```
 gcl https://github.com/ERROR244/1337Library.git && cd 1337Library
 make && make clean
+ls Libft.A
 ```
+
 You should see a Libft.A.
 
 # 1337Library

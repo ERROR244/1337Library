@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 20:47:13 by ksohail-          #+#    #+#             */
-/*   Updated: 2024/01/31 21:25:17 by ksohail-         ###   ########.fr       */
+/*   Updated: 2024/02/01 01:39:21 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,10 @@ static void	check_and_print(int *return_len, char *str, va_list lst)
 
 static int	to_check_ptr(const char *str, int i, va_list lst)
 {
-	int		k;
 	char	ptr[3];
 	int		return_len;
 
 	return_len = 0;
-	k = 0;
 	ptr[0] = str[i];
 	ptr[1] = str[i + 1];
 	ptr[2] = '\0';

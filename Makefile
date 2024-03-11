@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+         #
+#    By: error01 <error01@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 14:29:42 by ksohail-          #+#    #+#              #
-#    Updated: 2024/02/01 01:24:45 by ksohail-         ###   ########.fr        #
+#    Updated: 2024/03/11 17:45:14 by error01          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,7 @@ $(NAME): run_script $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 
 %.o:	%.c
-	@$(CC) $(CFLAGS) -c $^ -o $@
+	$(CC) $(CFLAGS) -c $^ -o $@
 	
 run_script:
 	@./script.sh

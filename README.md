@@ -14,7 +14,12 @@
     - [Usage](#get_next_line)
     - [en.subject](#get_next_line)
 - [garbage-collection](#garbage-collection)
-    - [Usage](#usage)
+    - [Description](#description)
+    - [Basic Concept](#basic-concept)
+    - [Memory Allocation](#memory-allocation)
+    - [Memory Deallocation](#memory-deallocation)
+    - [Garbage Collection](#garbage-collection)
+    - [Garbage Collection Using Linked Lists](# Garbage Collection Using Linked Lists)
 
 
 #### How does it work?
@@ -48,14 +53,25 @@ Welcome to my 42 Project Repository! This repository showcases the 3 projects `L
    + **Description:** A function that reads a line from a file descriptor, handling multiple file descriptors.
    + **Usage:** Guidelines on implementing `get_next_line` in your project.
    + **en.subject:** [View the PDF](https://cdn.intra.42.fr/pdf/pdf/135365/en.subject.pdf).
-## garbage-collection
-    + **Description:** Garbage collection is a form of automatic memory management in which a runtime system identifies and frees up memory that is no longer in use by the program. It's an essential part of languages like Java or Python, where memory management is automated. However, in languages like C or C++, memory management is manual, and the programmer is responsible for deallocating memory using functions like free().
-    + **Basic Concept:**
-        + Allocate memory: When memory is dynamically allocated (e.g., using malloc()), a node is added to a linked list to store the reference (pointer) to the allocated block.
-        + Deallocate memory: When the program is finished using the memory, it will traverse the list and free the memory before deleting the node from the linked list.
-        + Garbage collection: If certain blocks are no longer reachable from the main program (unreferenced), they can be freed from memory. You can implement this by periodically traversing the list to free up unreferenced blocks of memory.
+## Garbage Collection
 
-+ Garbage Collection Using a Linked List
-        In manual memory management (like in C), you could implement a simple garbage collection mechanism by keeping track of all memory allocations in a linked list. This list will store references to all the dynamically allocated blocks of memory, and you can traverse the list to free up memory once it's no longer needed.
+### Description
+Garbage collection is a mechanism for automatic memory management where the system identifies and frees up memory that is no longer in use. In languages like **Java** or **Python**, this process is automated by the runtime. However, in **C** or **C++**, memory management is manual, and developers are responsible for freeing memory using functions like `free()`.
 
-+ i used the lists in libft as part of garbage collection, we can keep track of dynamically allocated memory (heap-allocated objects) in a linked list. This approach ensures that when the program use ft_malloc to allocate memory, it no longer needs to be freed manually, the memory can be reclaimed, thus avoiding memory leaks.
+### Basic Concept
+In manual memory management (as in C), a simple garbage collection system can be implemented using a linked list to track memory allocations. This allows us to automate memory management, reducing the risk of memory leaks. The basic process involves:
+
+1. **Memory Allocation**:  
+   When memory is dynamically allocated (e.g., using `malloc()`), a node is added to a linked list to store a reference to the allocated block.
+   
+2. **Memory Deallocation**:  
+   When the memory is no longer needed, the linked list is traversed to free the memory and delete the corresponding node from the list.
+
+3. **Garbage Collection**:  
+   If certain blocks of memory become unreferenced (no longer reachable by the program), they can be automatically freed. By periodically traversing the list, unreferenced memory can be identified and reclaimed.
+
+### Garbage Collection Using Linked Lists
+In C, you can simulate garbage collection by maintaining a linked list that tracks dynamically allocated memory (heap-allocated objects). Each time a memory block is allocated using a custom function like `ft_malloc`, the pointer to that memory is added to the list. This way, the memory does not need to be manually freed; the program can automatically reclaim memory, preventing leaks.
+
+By integrating a garbage collection mechanism with **Libft** (through linked list handling functions), dynamically allocated memory is managed efficiently, ensuring no manual `free()` calls are required. This approach improves memory safety and management, particularly in projects that require heavy dynamic memory use.
+

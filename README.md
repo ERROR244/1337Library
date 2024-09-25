@@ -56,7 +56,6 @@ When using linked lists as part of garbage collection, we can keep track of dyna
 Garbage Collection Using a Linked List
 In manual memory management (like in C), you could implement a simple garbage collection mechanism by keeping track of all memory allocations in a linked list. This list will store references to all the dynamically allocated blocks of memory, and you can traverse the list to free up memory once it's no longer needed.
 
-Basic Concept:
-Allocate memory: When memory is dynamically allocated (e.g., using malloc()), a node is added to a linked list to store the reference (pointer) to the allocated block.
-Deallocate memory: When the program is finished using the memory, it will traverse the list and free the memory before deleting the node from the linked list.
-Garbage collection: If certain blocks are no longer reachable from the main program (unreferenced), they can be freed from memory. You can implement this by periodically traversing the list to free up unreferenced blocks of memory.
+    - **Basic Concept** Allocate memory: When memory is dynamically allocated (e.g., using malloc()), a node is added to a linked list to store the reference (pointer) to the allocated block.\
+                        Deallocate memory: When the program is finished using the memory, it will traverse the list and free the memory before deleting the node from the linked list.\
+                        Garbage collection: If certain blocks are no longer reachable from the main program (unreferenced), they can be freed from memory. You can implement this by periodically traversing the list to free up\ unreferenced blocks of memory.

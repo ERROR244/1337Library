@@ -3,16 +3,16 @@
 ## Table of Contents
 
 - [Libft](#libft)
-    - [Usage](#usage)
-    - [en.subject](#en.subject)
+    - [Usage](#libft)
+    - [en.subject](#libft)
 
 - [ft_printf](#ft_printf)
-    - [Usage](#usage)
-    - [en.subject](#en.subject)
+    - [Usage](#ft_printf)
+    - [en.subject](#ft_printf)
 
 - [get_next_line](#get_next_line)
-    - [Usage]
-    - [en.subject]
+    - [Usage](#get_next_line)
+    - [en.subject](#get_next_line)
 - [garbage-collection](#garbage-collection)
     - [Usage](#usage)
 
@@ -30,25 +30,25 @@ ls Libft.A
 
 You should see a Libft.A.
 
-# 1337Library
+## 1337Library
 
 Welcome to my 42 Project Repository! This repository showcases the 3 projects `Libft` `ft_printf` `get_next_line` completed and merged in one library:
 
-1. **Libft**
+## Libft
    - **Description:** A personal C library containing various standard functions and additional utility functions.
    - **Usage:** Detailed instructions on compiling and linking the library with your project.
-   - **en.subject:** [./subjects/subLibft.pdf].
+   - **en.subject:** [View the PDF](https://cdn.intra.42.fr/pdf/pdf/117032/en.subject.pdf).
 
-2. **ft_printf**
+## ft_printf
    - **Description:** An implementation of the `printf` function in C with support for basic formatting options.
    - **Usage:** Instructions on integrating the `ft_printf` library with your project.
-   - **en.subject:** `subjects/subFtPrintf.pdf`.
+   - **en.subject:** [View the PDF](https://cdn.intra.42.fr/pdf/pdf/135140/en.subject.pdf).
 
-3. **get_next_line**
+## get_next_line
    - **Description:** A function that reads a line from a file descriptor, handling multiple file descriptors.
    - **Usage:** Guidelines on implementing `get_next_line` in your project.
-   - **en.subject:** `subjects/subGetNextLine.pdf`.
-4. **garbage-collection**
+   - **en.subject:** [View the PDF](https://cdn.intra.42.fr/pdf/pdf/135365/en.subject.pdf).
+## garbage-collection
     - **Description:** Garbage collection is a form of automatic memory management in which a runtime system identifies and frees up memory that is no longer in use by the program. It's an essential part of languages like Java or Python, where memory management is automated. However, in languages like C or C++, memory management is manual, and the programmer is responsible for deallocating memory using functions like free().
     - **Basic Concept:**
         - Allocate memory: When memory is dynamically allocated (e.g., using malloc()), a node is added to a linked list to store the reference (pointer) to the allocated block.

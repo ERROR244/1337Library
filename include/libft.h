@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <fcntl.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
@@ -30,6 +31,15 @@ typedef struct s_list
 #  define BUFFER_SIZE 42
 # endif
 
+
+
+void	*ft_malloc(size_t size, t_list **list);
+void	add_to_list(void *content, t_list **list);
+void	ft_lst_clear(t_list **lst);
+
+
+
+
 int		print_ch(char c);
 int		print_str(char *str);
 int		print_i_d(long long i);
@@ -37,9 +47,16 @@ int		print_u(unsigned int i);
 int		print_x(unsigned int n, char c);
 int		print_p(void *ptr);
 int		ft_printf(const char *str, ...);
+
+
+
 char	*get_next_line(int fd);
-char	*my_line(char *line, char *buf);
-int		check(char *buf);
+char    *cut_next_line(char *remains);
+char    *push_line(char *remains);
+bool	ft_strchr_newline(char *line);
+char    *ft_strjoin_gnl(char *remains, char *buffer);
+
+
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);

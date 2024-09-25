@@ -12,25 +12,30 @@
 
 #include "libft.h"
 
-char	*get_next_line(int fd)
+char     *get_next_line(int fd)
 {
-	static char	buf[BUFFER_SIZE + 1];
-	char		*line;
-	int			readed;
+    if (fd < 0 || read(fd, NULL, 0) < 0 || BUFFER_SIZE <= 0)
+        return (NULL);
+    char buffer[BUFFER_SIZE + 1];
+    buffer[0] = '\0';
+    static char *remains;
+	char *line;
+    int count;
 
-	if (BUFFER_SIZE < 1 || fd < 0 || read(fd, 0, 0) == -1
-		|| BUFFER_SIZE > 0x7fffffff)
-		return (0);
-	line = NULL;
-	readed = 1;
-	while (readed > 0)
-	{
-		if (!buf[0])
-			readed = read(fd, buf, BUFFER_SIZE);
-		if (readed > 0)
-			line = my_line(line, buf);
-		if (check(buf))
-			break ;
-	}
-	return (line);
+    count = 1;
+    while (!ft_strchr_newline(buffer) && count != 0)
+    {
+        if ((count = read(fd, buffer, BUFFER_SIZE)) == (-1))
+            return (NULL);
+        buffer[count] = '\0';
+        remains = ft_strjoin_gnl(remains, buffer);
+    }
+    line = push_line(remains);
+    remains = cut_next_line(remains);
+	if (line[0] == '\0')
+    {
+        free(line);
+        return (NULL);
+    }
+    return (line);
 }

@@ -11,8 +11,8 @@
     - [en.subject](#en.subject)
 
 - [get_next_line](#get_next_line)
-    - [Usage](#usage)
-    - [en.subject](#en.subject)
+    - [Usage]
+    - [en.subject]
 - [garbage-collection](#garbage-collection)
     - [Usage](#usage)
 
@@ -37,7 +37,7 @@ Welcome to my 42 Project Repository! This repository showcases the 3 projects `L
 1. **Libft**
    - **Description:** A personal C library containing various standard functions and additional utility functions.
    - **Usage:** Detailed instructions on compiling and linking the library with your project.
-   - **en.subject:** `subjects/subLibft.pdf`.
+   - **en.subject:** [./subjects/subLibft.pdf].
 
 2. **ft_printf**
    - **Description:** An implementation of the `printf` function in C with support for basic formatting options.

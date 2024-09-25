@@ -16,10 +16,7 @@
 - [garbage-collection](#garbage-collection)
     - [Description](#description)
     - [Basic Concept](#basic-concept)
-    - [Memory Allocation](#memory-allocation)
-    - [Memory Deallocation](#memory-deallocation)
-    - [Garbage Collection](#garbage-collection)
-    - [Garbage Collection Using Linked Lists](# Garbage Collection Using Linked Lists)
+    - [Garbage Collection Using Linked Lists](#garbage-collection-using-linked-lists)
 
 
 #### How does it work?
